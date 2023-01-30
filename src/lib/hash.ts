@@ -1,4 +1,4 @@
-import { createHash } from "crypto";
+import { createHash } from 'crypto';
 
 // import { binToHex, instantiateSha256, utf8ToBin } from "@bitauth/libauth";
 
@@ -37,5 +37,5 @@ import { createHash } from "crypto";
  * @returns sha256 message digest
  */
 export const sha256Native = (message: string) => {
-  return createHash("sha256").update(message).digest("hex");
+  return createHash('sha256').update(message).digest('hex');
 };
