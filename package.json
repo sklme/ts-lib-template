@@ -1,0 +1,20 @@
+{
+  "name": "ts-lib-template",
+  "version": "0.0.1",
+  "description": "一个 ts lib 的模板仓库，可以当做脚手架使用。",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sklme/ts-lib-template.git"
+  },
+  "author": "iskl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sklme/ts-lib-template/issues"
+  },
+  "homepage": "https://github.com/sklme/ts-lib-template#readme",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
+}
