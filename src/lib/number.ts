@@ -20,7 +20,7 @@
  * @anotherNote Some other value.
  */
 export const double = (value: number) => {
-  let double = 2;
+  const double = 2;
   return value * double;
 };
 
