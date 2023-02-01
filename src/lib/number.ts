@@ -1,23 +1,24 @@
 /**
- * Multiplies a value by 2. (Also a full example of TypeDoc's functionality.)
+ * 传入一个数值，返回乘以2之后的结果（这也是一个完整的TypeDoc的示例）。
  *
- * ### Example (es module)
+ * ### es module
  * ```js
  * import { double } from 'typescript-starter'
  * console.log(double(4))
  * // => 8
  * ```
  *
- * ### Example (commonjs)
+ * ### commonjs
  * ```js
  * var double = require('typescript-starter').double;
  * console.log(double(4))
  * // => 8
  * ```
  *
- * @param value - Comment describing the `value` parameter.
- * @returns Comment describing the return type.
- * @anotherNote Some other value.
+ * @param value 传入的数值
+ * @returns 乘以2的数值
+ * @anotherNote 我最厉害
+ * @as 123
  */
 export const double = (value: number) => {
   const double = 2;
