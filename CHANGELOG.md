@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/sklme/ts-lib-template/compare/v0.0.2...v0.1.0) (2023-02-01)
+
+
+### Features
+
+* readme ([7c71235](https://github.com/sklme/ts-lib-template/commit/7c7123599da49ac86bf98370cd1c047c942985da))
+
+
+### Bug Fixes
+
+* fix github workflow permissions ([462b55a](https://github.com/sklme/ts-lib-template/commit/462b55aaf0805912599662fd61b8c8b81819c2f9))
+* readme ([7a29b10](https://github.com/sklme/ts-lib-template/commit/7a29b101abe62c96d3d39e9f9fa9a76851acef4d))
+
 ### 0.0.2 (2023-02-01)
 
 
