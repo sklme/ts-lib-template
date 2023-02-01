@@ -2,24 +2,29 @@
 
 1. 支持单元测试与覆盖率统计
 2. 使用 standard-version 或者 github action 升级版本号，产生 changelog
-4. 使用 typedoc 生成文档
-5. conventional commit 和相应的 hooks 的支持
-6. 代码美化与语法检查的支持
+3. 使用 typedoc 生成文档
+4. conventional commit 和相应的 hooks 的支持
+5. 代码美化与语法检查的支持
 
 ## 开发之前
+
 1. 修改`package.json`的模块信息，模块名、作者和描述。
-2. 修改github workflows 里面的 package-name（改成和package.json的name一样）
+2. 修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）
 
-### 非github项目
+### 非 github 项目
 
-使用standard-version来升级版本号，然后需要手动发布。
-1. 删除.github目录
+使用 standard-version 来升级版本号，然后需要手动发布。
 
-### github项目
-使用github action自动化发布
-1. 删除npm version命令
-2. 删除standard-version依赖包
-3. 在github项目配置secrets：key为NPM_TOKEN，value为npm的token
+1. 删除.github 目录
+
+### github 项目
+
+使用 github action 自动化发布
+
+1. 删除 npm version 命令
+2. 删除 standard-version 依赖包
+3. 在 github 项目配置 secrets：key 为 NPM_TOKEN，value 为 npm 的 token
+4. 在 github 仓库到 `Settings > Code and automation > Actions > General` > Workflow permissions， 打开 `Allow GitHub Actions to create and approve pull requests`.
 
 ## 开发与发布
 
@@ -34,10 +39,11 @@ npm run watch:test
 
 ### 发布
 
-github项目：
-只要遵循comventional commit约定的提交，push到github之后，会自动产生merge request，合并之后就会自动发布
+github 项目：
+只要遵循 comventional commit 约定的提交，push 到 github 之后，会自动产生 merge request，合并之后就会自动发布
 
-非github项目：
+非 github 项目：
+
 ```shell
 # 发布前准备，会编译、测试以及升级版本号，产生changlog
 npm run prepare-release
