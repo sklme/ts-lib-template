@@ -1,8 +1,13 @@
+name: release-please
 on:
   push:
     branches:
       - main
-name: release-please
+
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   # 运行在 ubuntu-latest
   release-please:
@@ -10,17 +15,18 @@ jobs:
     steps:
       # 发布的检验
       - uses: google-github-actions/release-please-action@v3
-        name: release-please
+        name: 发布检验 #release-please
         id: release
         with:
           release-type: node
           package-name: '@iskl/ts-lib-template'
       # Checkout 仓库
       - uses: actions/checkout@v2
-        name: Checkout
+        name: Checkout 仓库 # Checkout
         if: ${{ steps.release.outputs.release_created }}
       # Install Node.js
       - uses: actions/setup-node@v1
+        name: 安装nodejs
         if: ${{ steps.release.outputs.release_created }}
         with:
           node-version: 18
@@ -28,13 +34,13 @@ jobs:
       # 安装pnpm
       - uses: pnpm/action-setup@v2
         if: ${{ steps.release.outputs.release_created }}
-        name: Install pnpm
+        name: 安装pnpm
         id: pnpm-install
         with:
           version: 7
           run_install: false
       # 获取pnpm的缓存路径
-      - name: Get pnpm store directory
+      - name: 获取pnpm的缓存路径 # Get pnpm store directory
         if: ${{ steps.release.outputs.release_created }}
         id: pnpm-cache
         shell: bash
@@ -43,14 +49,14 @@ jobs:
       # 设置缓存
       - uses: actions/cache@v3
         if: ${{ steps.release.outputs.release_created }}
-        name: Setup pnpm cache
+        name: 设置pnpm缓存 # Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       # 安装依赖，编译代码
-      - name: Install dependencies and complile
+      - name: 安装依赖，编译代码 # Install dependencies and complile
         if: ${{ steps.release.outputs.release_created }}
         run: |
           pnpm install
@@ -58,7 +64,7 @@ jobs:
           npm run cov:check
           npm run doc:html
       # 发布
-      - name: release
+      - name: 发布到npm # release
         if: ${{ steps.release.outputs.release_created }}
         run: npm publish --access=public
         env:
