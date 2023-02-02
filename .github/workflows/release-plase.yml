@@ -63,6 +63,7 @@ jobs:
           npm run test
           npm run cov:check
           npm run doc:html
+          npm run doc:publish
       # 发布
       - name: 发布到npm # release
         if: ${{ steps.release.outputs.release_created }}

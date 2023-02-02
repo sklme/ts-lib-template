@@ -16,6 +16,8 @@
 使用 standard-version 来升级版本号，然后需要手动发布。
 
 1. 删除.github 目录
+2. 删除 doc:publish 命令
+3. 删除 gh-pages 依赖包
 
 ### github 项目
 
