@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.2](https://github.com/sklme/ts-lib-template/compare/v0.3.1...v0.3.2) (2023-02-02)
+
+
+### Bug Fixes
+
+* doc publish ([c02c2dd](https://github.com/sklme/ts-lib-template/commit/c02c2dd74f71bae7799ddf813bb76853346ded53))
+
 ## [0.3.1](https://github.com/sklme/ts-lib-template/compare/v0.3.0...v0.3.1) (2023-02-02)
 
 
