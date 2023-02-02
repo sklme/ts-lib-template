@@ -9,7 +9,8 @@
 ## 开发之前
 
 1. 修改`package.json`的模块信息，模块名、作者和描述。
-2. 修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）
+2. 删除 CHANGELOG.md
+3. 修改 README.md
 
 ### 非 github 项目
 
@@ -26,7 +27,8 @@
 1. 删除 npm version 命令
 2. 删除 standard-version 依赖包
 3. 在 github 项目配置 secrets：key 为 NPM_TOKEN，value 为 npm 的 token
-4. 在 github 仓库到 `Settings > Code and automation > Actions > General` > Workflow permissions， 打开 `Allow GitHub Actions to create and approve pull requests`.
+4. 修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）
+5. 在 github 仓库到 `Settings > Code and automation > Actions > General` > Workflow permissions， 打开 `Allow GitHub Actions to create and approve pull requests`.
 
 ## 开发与发布
 
