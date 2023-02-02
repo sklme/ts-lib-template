@@ -63,7 +63,11 @@ jobs:
           npm run test
           npm run cov:check
           npm run doc:html
-          npm run doc:publish
+      # 发布文档到gh-pages分支
+      - name: 发布文档到gh-pages
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          npx gh-pages -m \"[ci skip] Updates\" -d build/docs -u "github-actions-bot <support+actions@github.com>"
       # 发布
       - name: 发布到npm # release
         if: ${{ steps.release.outputs.release_created }}
