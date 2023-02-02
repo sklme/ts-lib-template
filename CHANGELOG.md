@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/sklme/ts-lib-template/compare/v0.2.0...v0.3.0) (2023-02-02)
+
+
+### Features
+
+* 增加发布文档到gh-pages ([c020e2f](https://github.com/sklme/ts-lib-template/commit/c020e2f4e9dde4e5dd0282646097d378f8f5e92f))
+
 ## [0.2.0](https://github.com/sklme/ts-lib-template/compare/v0.1.0...v0.2.0) (2023-02-02)
 
 ### Features
