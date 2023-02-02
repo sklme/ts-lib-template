@@ -3,8 +3,8 @@
 1. 支持单元测试与覆盖率统计
 2. 使用 standard-version 或者 github action 升级版本号，产生 changelog
 3. 使用 typedoc 生成文档
-4. conventional commit 和相应的 hooks 的支持
-5. 代码美化与语法检查的支持
+4. conventional commit 的校验支持
+5. 代码美化与语法检查的支持，以及相应的 git hooks 自动化支持
 
 ## 开发之前
 
