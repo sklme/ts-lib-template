@@ -40,6 +40,7 @@ npm run watch:test
 ### 发布
 
 github 项目：
+
 只要遵循 comventional commit 约定的提交，push 到 github 之后，会自动产生 merge request，合并之后就会自动发布
 
 非 github 项目：
