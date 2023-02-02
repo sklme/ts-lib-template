@@ -67,7 +67,10 @@ jobs:
       - name: 发布文档到gh-pages
         if: ${{ steps.release.outputs.release_created }}
         run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npx gh-pages -m \"[ci skip] Updates\" -d build/docs -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 发布
       - name: 发布到npm # release
         if: ${{ steps.release.outputs.release_created }}
