@@ -15,20 +15,57 @@
 <div class="tsd-panel tsd-typography"><p>一个 ts lib 的模板仓库，可以当做脚手架使用。</p>
 <ol>
 <li>支持单元测试与覆盖率统计</li>
-<li>使用 standard-version 升级版本号，产生 changelog</li>
+<li>使用 standard-version 或者 github action 升级版本号，产生 changelog</li>
 <li>使用 typedoc 生成文档</li>
-<li>conventional commit 和相应的 hooks 的支持</li>
-<li>代码美化与语法检查的支持</li>
+<li>conventional commit 的校验支持</li>
+<li>代码美化与语法检查的支持，以及相应的 git hooks 自动化支持</li>
+</ol>
+
+<a href="#开发之前" id="开发之前" style="color: inherit; text-decoration: none;">
+  <h2>开发之前</h2>
+</a>
+<ol>
+<li>修改<code>package.json</code>的模块信息，模块名、作者和描述。</li>
+<li>修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）</li>
+</ol>
+
+<a href="#非-github-项目" id="非-github-项目" style="color: inherit; text-decoration: none;">
+  <h3>非 github 项目</h3>
+</a>
+<p>使用 standard-version 来升级版本号，然后需要手动发布。</p>
+<ol>
+<li>删除.github 目录</li>
+<li>删除 doc:publish 命令</li>
+<li>删除 gh-pages 依赖包</li>
+</ol>
+
+<a href="#github-项目" id="github-项目" style="color: inherit; text-decoration: none;">
+  <h3>github 项目</h3>
+</a>
+<p>使用 github action 自动化发布</p>
+<ol>
+<li>删除 npm version 命令</li>
+<li>删除 standard-version 依赖包</li>
+<li>在 github 项目配置 secrets：key 为 NPM_TOKEN，value 为 npm 的 token</li>
+<li>在 github 仓库到 <code>Settings &gt; Code and automation &gt; Actions &gt; General</code> &gt; Workflow permissions， 打开 <code>Allow GitHub Actions to create and approve pull requests</code>.</li>
 </ol>
 
 <a href="#开发与发布" id="开发与发布" style="color: inherit; text-decoration: none;">
   <h2>开发与发布</h2>
 </a>
-<p>修改<code>package.json</code>的模块信息，模块名、作者和描述。</p>
-<p>开发：</p>
+
+<a href="#开发" id="开发" style="color: inherit; text-decoration: none;">
+  <h3>开发</h3>
+</a>
 <pre><code class="language-shell"><span class="hl-0"># 有变化就重新编译</span><br/><span class="hl-1">npm </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">watch:build</span><br/><span class="hl-0"># 有变化的时候使用编译过的代码进行测试</span><br/><span class="hl-1">npm </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">watch:test</span>
 </code></pre>
-<p>发布：</p>
+
+<a href="#发布" id="发布" style="color: inherit; text-decoration: none;">
+  <h3>发布</h3>
+</a>
+<p>github 项目：</p>
+<p>只要遵循 comventional commit 约定的提交，push 到 github 之后，会自动产生 merge request，合并之后就会自动发布</p>
+<p>非 github 项目：</p>
 <pre><code class="language-shell"><span class="hl-0"># 发布前准备，会编译、测试以及升级版本号，产生changlog</span><br/><span class="hl-1">npm </span><span class="hl-2">run</span><span class="hl-1"> </span><span class="hl-2">prepare-release</span><br/><span class="hl-0"># 推送标签和代码</span><br/><span class="hl-1">git </span><span class="hl-2">push</span><span class="hl-1"> </span><span class="hl-2">--follow-tags</span><span class="hl-1"> </span><span class="hl-2">origin</span><span class="hl-1"> </span><span class="hl-2">main</span><br/><span class="hl-0"># 发布到npm</span><br/><span class="hl-1">npm </span><span class="hl-2">publish</span>
 </code></pre>
 
