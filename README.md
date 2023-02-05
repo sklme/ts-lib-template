@@ -30,6 +30,11 @@
 4. 修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）
 5. 在 github 仓库到 `Settings > Code and automation > Actions > General` > Workflow permissions， 打开 `Allow GitHub Actions to create and approve pull requests`.
 
+### 最后
+
+1. 安装依赖
+2. 然后运行`npm run apply-hooks`
+
 ## 开发与发布
 
 ### 开发
