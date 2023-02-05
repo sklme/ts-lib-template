@@ -1,6 +1,6 @@
 {
   "name": "@iskl/ts-lib-template",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "一个 ts lib 的模板仓库，可以当做脚手架使用。",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
