@@ -43,7 +43,7 @@
     "version": "standard-version",
     "reset-hard": "git clean -dfx && git reset --hard && pnpm i",
     "prepare-release": "run-s test cov:check doc:html version",
-    "postinstall": "tsx ./scripts/apply_hooks.ts"
+    "apply-hooks": "tsx ./scripts/apply_hooks.ts"
   },
   "repository": {
     "type": "git",
