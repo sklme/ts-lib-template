@@ -26,7 +26,8 @@
 </a>
 <ol>
 <li>修改<code>package.json</code>的模块信息，模块名、作者和描述。</li>
-<li>修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）</li>
+<li>删除 CHANGELOG.md</li>
+<li>修改 README.md</li>
 </ol>
 
 <a href="#非-github-项目" id="非-github-项目" style="color: inherit; text-decoration: none;">
@@ -47,6 +48,7 @@
 <li>删除 npm version 命令</li>
 <li>删除 standard-version 依赖包</li>
 <li>在 github 项目配置 secrets：key 为 NPM_TOKEN，value 为 npm 的 token</li>
+<li>修改 github workflows 里面的 package-name（改成和 package.json 的 name 一样）</li>
 <li>在 github 仓库到 <code>Settings &gt; Code and automation &gt; Actions &gt; General</code> &gt; Workflow permissions， 打开 <code>Allow GitHub Actions to create and approve pull requests</code>.</li>
 </ol>
 
