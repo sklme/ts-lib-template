@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/sklme/ts-lib-template/compare/v0.3.3...v0.4.0) (2023-02-05)
+
+
+### Features
+
+* add build doc script ([4bf64f5](https://github.com/sklme/ts-lib-template/commit/4bf64f521334a3d9a52bda7e6991f396ee42bfdb))
+
+
+### Bug Fixes
+
+* 增加post install ([9d0baff](https://github.com/sklme/ts-lib-template/commit/9d0baff12e5e3e2814184b6c10c342ed8dc2dc88))
+
 ## [0.3.3](https://github.com/sklme/ts-lib-template/compare/v0.3.2...v0.3.3) (2023-02-02)
 
 
